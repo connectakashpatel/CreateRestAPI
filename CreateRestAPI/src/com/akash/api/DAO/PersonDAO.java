@@ -54,7 +54,8 @@ public class PersonDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			c.close();
+			if(c != null)
+				c.close();
 		}
 		
 		return personList;
