@@ -94,5 +94,38 @@ public class PersonDAO {
 		return jsonList;
 
 	}
+	
+	public String getUser(String name) throws SQLException {
+
+		Connection c = null;
+		PreparedStatement ps = null;
+		JSONArray jsonArray = new JSONArray();
+		
+
+		String jsonList = null;
+		String sql = "SELECT * FROM person WHERE name=?";
+
+		c = connectDB();
+
+		try {
+			ps = c.prepareStatement(sql);
+			ps.setString(1, name);
+			ResultSet rs = ps.executeQuery();
+			
+			jsonArray = ResultSetConverter.convert(rs);
+			
+			jsonList = jsonArray.toString();
+
+		} catch (SQLException | JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (c != null)
+				c.close();
+		}
+
+		return jsonList;
+
+	}
 
 }

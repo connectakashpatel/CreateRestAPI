@@ -3,7 +3,7 @@
   <display-name>CreateRestAPI</display-name>
 
   <welcome-file-list>
-    <welcome-file>Readme.html</welcome-file>
+    <welcome-file>jsp/index.jsp</welcome-file>
   </welcome-file-list>
 
   <servlet>
@@ -17,6 +17,6 @@
 
   <servlet-mapping>
   	<servlet-name>CreateRestAPI</servlet-name>
-  	<url-pattern>/*</url-pattern>
+  	<url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>
