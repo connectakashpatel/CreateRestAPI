@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 import com.akash.api.DAO.PersonDAO;
 import com.akash.api.Model.Person;
 
-@Path("/a")
+@Path("/person")
 public class PersonCtrl {
 
 	
@@ -38,4 +38,13 @@ public class PersonCtrl {
 		return dao.showAll();
 	}
 	
+	@GET
+	@Path("/alljson")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String allJson() throws SQLException {
+		
+		PersonDAO dao = new PersonDAO();
+	
+		return dao.showAllJson();
+	}
 }
