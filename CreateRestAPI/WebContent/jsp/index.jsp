@@ -5,13 +5,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Read Me</title>
+
+<style>
+td {
+    text-align: center;
+}
+</style>
 </head>
-<body>
+<body align="center">
 
 <h1>Read ME:</h1>
 
 
-<table>
+<table border="1" align="center">
 
 	<tr>
 		<th>Mapping</th><th>Values</th><th>URI</th>
