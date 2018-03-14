@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 import com.akash.api.DAO.PersonDAO;
 import com.akash.api.Model.Person;
 
-@Path("/person")
+@Path("/personget")
 public class PersonGetCtrl {
 
 	
